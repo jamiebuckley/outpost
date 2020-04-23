@@ -14,8 +14,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'kaminari'
-gem 'devise'
-gem 'paper_trail'
 gem 'diffy'
 gem 'discard', '~> 1.2'
 gem 'filterrific'
@@ -24,6 +22,9 @@ gem 'rack-cors'
 gem 'geocoder'
 gem 'pg_search'
 gem 'devise_lastseenable'
+gem 'devise'
+gem 'paper_trail'
+gem 'paper_trail-association_tracking'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

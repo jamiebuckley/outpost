@@ -10,6 +10,8 @@ class Taxonomy < ApplicationRecord
 
     validates_presence_of :name, uniqueness: true
 
+    has_paper_trail
+
     def slug
         name.parameterize
     end
