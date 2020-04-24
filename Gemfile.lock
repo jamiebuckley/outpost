@@ -63,6 +63,8 @@ GEM
       zeitwerk (~> 2.2)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    audited (4.9.0)
+      activerecord (>= 4.2, < 6.1)
     bcrypt (3.1.13)
     bindex (0.8.1)
     bootsnap (1.4.6)
@@ -291,6 +293,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  audited (~> 4.9)
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
