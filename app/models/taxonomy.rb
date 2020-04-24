@@ -10,6 +10,8 @@ class Taxonomy < ApplicationRecord
 
     validates_presence_of :name, uniqueness: true
 
+    has_associated_audits
+
     def slug
         name.parameterize
     end
