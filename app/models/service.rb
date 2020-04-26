@@ -38,7 +38,16 @@ class Service < ApplicationRecord
   paginates_per 20
   validates_presence_of :name
 
-  has_paper_trail ignore: [:created_at, :updated_at, :discarded_at, :approved]
+  def json_taxa
+    self.taxonomies.as_json
+  end
+
+  has_paper_trail(
+    ignore: [:created_at, :updated_at, :discarded_at, :approved],
+    meta: {
+      taxonomies: :json_taxa
+    }
+  )
 
   include Discard::Model
 

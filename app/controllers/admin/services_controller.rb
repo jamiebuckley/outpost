@@ -32,7 +32,10 @@ class Admin::ServicesController < Admin::BaseController
   end
 
   def update
-    if @service.update(service_params)
+    # @service
+
+    @service.update(service_params)  
+    if @service.paper_trail.save_with_version 
       redirect_to admin_service_url(@service), notice: "Service has been updated."
     else
       render "show"
