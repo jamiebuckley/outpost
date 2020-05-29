@@ -114,6 +114,13 @@ class Service < ApplicationRecord
     self.save
   end
 
+  def mark_for_deletion
+    self.marked_for_deletion = Time.now
+    self.snapshot_action = "marked for deletion"
+    self.approved = true
+    self.save
+  end
+
   def update_service_at_locations
     self.service_at_locations.each do |service_at_location|
       service_at_location.update_service_fields

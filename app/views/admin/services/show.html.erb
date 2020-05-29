@@ -81,6 +81,8 @@
         <%= s.submit "Update", class: "button" %>
         <% unless @service.discarded? %>
           <%= link_to "Archive", admin_service_path(@service), method: "delete", class: "button button--danger", data: {confirm: "Are you sure?" } %>
+        <% else %>
+          <%= link_to "Mark for permenant deletion", admin_archive_path(@service), method: "delete", class: "button button--danger", data: {confirm: "Are you sure? This service will be deleted permenantly in 30 days." } %>
         <% end %>
       </div>
 
